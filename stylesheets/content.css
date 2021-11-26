@@ -1,0 +1,44 @@
+.r1{
+  width: 100px;
+  height: 100px;
+  top: 40%;
+  background-color: red;
+  position: absolute;
+  animation: r1 3s infinite alternate ease-in-out;
+}
+@keyframes r1 {
+  0% {left: 0px; background-color: red;}
+  50% {left: 250px; background-color: blue; transform: scaleY(.4) scaleX(0.4);}
+  100% {left: 500px; background-color: yellow;}
+}
+.r2{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: blue;
+  position: absolute;
+  animation: r2 4s infinite alternate-reverse linear;
+}
+@keyframes r2 {
+  0% {left: 0px; top: 0px; background-color: blue;}
+  25% {left: 250px; top: 0px; background-color: green;}
+  50% {left: 250px; top:250px; background-color: yellow;}
+  75%{left: 0px; top:250px; background-color: red;}
+  100% {left: 0px; top: 0px; background-color: blue;}
+}
+.b1{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: blue;
+  position: absolute;
+  animation: b1 2s infinite cubic-bezier(0,.62,.83,1.18);
+}
+@keyframes b1 {
+  0%{left:500px; top:0px;animation-timing-function:cubic-bezier(.97,-0.09,1,1.01);transform:scaleX(0.3) }
+  15%{animation-timing-function:cubic-bezier(0,.62,.83,1.18); left:580px; top: 250px;transform:scaleY(0.3)}
+  30%{animation-timing-function:cubic-bezier(.54,.58,.12,1.08); left:640px; top:40px;}
+  45%{animation-timing-function:cubic-bezier(.45,.98,1,1); left:700px; top: 300px;transform:scaleX(0.6)}
+  60%{animation-timing-function:cubic-bezier(.25,.79,1,1); left:740px; top: 150px;transform:scaleY(0.6)}
+100%{animation-timing-function:linear; left:900px; top: 250px;}
+}
